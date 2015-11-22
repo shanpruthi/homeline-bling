@@ -3,7 +3,8 @@ Definition of urls for DjangoWebProject.
 """
 
 from datetime import datetime
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
 from app.forms import BootstrapAuthenticationForm
 
 # Uncomment the next lines to enable the admin:
