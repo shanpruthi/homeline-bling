@@ -2,12 +2,21 @@
 Definition of views.
 """
 
-from django.shortcuts import render
-from django.http import HttpRequest
+from django.shortcuts import render, render_to_response
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from datetime import datetime
 from app.models import *;
 from django.shortcuts import render_to_response
+from twilio.twiml import Response
+from .forms import Shelter_Form
+
+from django_twilio.decorators import twilio_view
+from twilio.twiml import Response
+
+def shelter_information(request):
+    shelter_information = Shelter_Information.objects.all();
+    return render_to_response('app/database.html', {'shelter_information': shelter_information})
 
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
@@ -58,6 +67,7 @@ def home(request):
         context_instance = RequestContext(request,
         {
             'title':'Home Page',
+            'message':'',
             'year':datetime.now().year,
         })
     )
@@ -103,6 +113,27 @@ def shelters(request):
         })
     )
 
+def database(request):
+    """Renders the database page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/database.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Database',
+            'message':'Your database page.',
+            'year':datetime.now().year,
+        })
+    )
+    resultant = Shelter_Information.objects.all()
+    if request.method == "GET":
+        form = Shelter_Form();
+        return render(request, 'app/database.html', {'form': Shelter_Form})
+    elif request.method == "POST":
+        form = Shelter_Form(request.POST)
+        form.save()
+        return HttpResponseRedirect('/home')
 
 def login(request):
     """Renders the login page."""
@@ -117,7 +148,6 @@ def login(request):
             'year':datetime.now().year,
         })
     )
-
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()

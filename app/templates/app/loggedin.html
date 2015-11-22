@@ -1,28 +1,15 @@
 {% extends "app/layout.html" %}
-
-{% block content %}
 <div class="layout loggedin">
 </br>
 <h2>{{ title }}.</h2>
-
-{% if user.is_authenticated %}
 <h4>Update the available spots in the table</h4>
-<table>
-    <tr>
-        <th>Shelter name</th>
-        <th>Shelter Address</th>
-        <th>City</th>
-        <th>Spots Available</th>
-    </tr>
-    {% for item in query_results %}
-    <tr> 
-        <td>{{ item.shelter_name }}</td>
-        <td>{{ item.shelter_address }}</td>
-        <td>{{ item.shelter_city }}</td>
-        <td>{{ item.spots_remaining }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
+        {% for info in Shelter_Information %}
+        <li>{{ info.id }}</li>
+        <li>{{ info.shelter_address }}</li>
+        <li>{{ info.shelter_city }}</li>
+        <li>{{ info.shelter_city }}</li>
+        <li>{{ info.spots_remaining }}</li>
+        </ul>
+        {% endfor %}
 </div>
-{% endblock %}
+<h4>Log in to see this page. </h4>        
