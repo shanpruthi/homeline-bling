@@ -4,6 +4,7 @@ Django settings for DjangoWebProject project.
 
 from os import path
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
+sys.path.append("/venv/lib/python2.7/site-packages")
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
