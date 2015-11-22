@@ -76,6 +76,8 @@ def login(request):
 def gather_digits(request):
     twilio_response = Response()
  
+    shelters = Shelter_Information.objects.filter(spots_remaining__gt=0)
+
     with twilio_response.gather(action='/respond/', numDigits=1) as g:
         g.say('Press one to be dissapointed, two to receive an SMS')
         g.pause(length=1)
