@@ -6,6 +6,8 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from app.models import *;
+#from twilio.twiml import Response
 
 def home(request):
     """Renders the home page."""
@@ -47,3 +49,28 @@ def about(request):
             'year':datetime.now().year,
         })
     )
+
+
+def login(request):
+    """Renders the login page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/login.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Login',
+            'message':'Log in to your account.',
+            'year':datetime.now().year,
+        })
+    )
+
+def gather_digits(request):
+    twilio_response = Response()
+ 
+    with twilio_response.gather(action='/respond/', numDigits=1) as g:
+        g.say('Press one to hear a song, two to receive an SMS')
+        g.pause(length=1)
+        g.say('Press one to hear a song, two to receive an SMS')
+ 
+    return twilio_response

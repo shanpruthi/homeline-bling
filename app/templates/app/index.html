@@ -1,37 +1,42 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
-
 <div class="jumbotron">
-    <h1>Homeline Bling</h1>
-    <p class="lead">Give and get...</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <div class="container-fluid"> <div class="row">
+        <div class="col-md-6">
+            <img src = "http://i.imgur.com/A887l98.gif">
+        </div>
+        <div class="col-md-6"><div class="text">
+            <h1>Homeline Bling</h1>
+            <hr>
+            <h4>Call me on your payphone, late night when you need a home</h4>
+            <h2 style="padding-top:10%;">1-800-ACTUAL#</h3>
+            <h5 style="font-style:italics;">call for the closest shelter near you</h5>
+            <hr style="width:100%">
+            <a href=#about><p>learn more &#8964</p></a>
+        </div></div>
+    </div></div>
 </div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Django gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">Learn more &raquo;</a></p>
+<div id="about"><div class="container">
+    <div class="row">
+        <h2>how it works</h2>
+        <div class="col-md-4">
+            <img src="http://orig10.deviantart.net/f905/f/2015/326/2/f/i1_by_eexie-d9hlaif.png">
+            <h5>
+                the homeless can call the hotline from any payphone or cellphone
+            </h5>
+        </div>
+        <div class="col-md-4">
+            <img src="http://orig02.deviantart.net/ff60/f/2015/326/1/7/i2_by_eexie-d9hlaic.png">
+            <h5>we extract data from our database of shelters, and using twilio api...</h5>
+        </div>
+        <div class="col-md-4">
+            <img src="http://orig05.deviantart.net/4bd8/f/2015/326/f/0/i3_by_eexie-d9hlai7.png">
+            <h5>
+                ....we reply with the location of the closest shelter home near you
+            </h5>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Python Tools for Visual Studio</h2>
-        <p>
-            PTVS is a free, open source plugin that turns Visual Studio into a Python IDE 
-            with support for editing, browsing, IntelliSense, Azure remote debugging, 
-            profiling and more.
-        </p>
-        <p><a class="btn btn-default" href="http://pytools.codeplex.com">Learn more &raquo;</a></p>
-    </div>
-</div>
+</div></div>
 
 {% endblock %}

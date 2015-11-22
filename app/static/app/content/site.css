@@ -1,14 +1,52 @@
-﻿body {
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color:#FFF;
+    background-color: #f8aec3;
     padding-top: 50px;
     padding-bottom: 20px;
+    text-transform: uppercase;
+    font-style: oblique;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
+}
+a{
+    color:#fff;
+}
+a:hover, a:focus, a:target{
+    color:#fff;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5{
+    font-weight: bold;
+    font-style: italic;
+}
+p{
+    font-size: 11pt;
+    font-style:normal;
+    font-weight:300;
+}
+h1{
+    font-size: 56px;   
+}
+h2{
+    font-size: 42px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size:14px;
+}
+hr{
+    border:solid 1px #fff;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -28,15 +66,58 @@ textarea {
 input.input-validation-error {
     border: 1px solid #b94a48;
 }
-
 input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
-
 .validation-summary-errors {
     color: #b94a48;
 }
-
 .validation-summary-valid {
     display: none;
+}
+.container{
+    width:100%;
+}
+.jumbotron{
+    padding:0;
+    background-color: #97e5f6;
+    text-align: center;
+    margin:0;
+}
+.jumbotron img{
+    width:100%;
+}
+.jumbotron .text{
+    padding:10% 20%;
+    margin:auto;
+}
+#about img{
+    height:100px;
+    margin:50px 0;
+}
+#about{
+    text-align:center;
+    background-color: #ddc91f;
+    padding:50px 0;
+}
+.layout{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+footer {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.lowercase {
+    text-transform: default;
+}
+.aboutpage {
+    background-color: #3B3131;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.contactpage {
+    background-color: #3B3131;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
