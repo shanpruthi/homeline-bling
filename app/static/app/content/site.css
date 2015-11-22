@@ -24,6 +24,11 @@ h1,h2,h3,h4,h5{
     font-weight: bold;
     font-style: italic;
 }
+p{
+    font-size: 11pt;
+    font-style:normal;
+    font-weight:300;
+}
 h1{
     font-size: 56px;   
 }
@@ -38,9 +43,6 @@ h4{
 }
 h5{
     font-size:14px;
-}
-p{
-    font-size: 11pt;
 }
 hr{
     border:solid 1px #fff;
