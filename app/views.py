@@ -9,6 +9,9 @@ from datetime import datetime
 from app.models import *;
 #from twilio.twiml import Response
 
+from django_twilio.decorators import twilio_view
+from twilio.twiml import Response
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -50,6 +53,7 @@ def about(request):
         })
     )
 
+<<<<<<< HEAD
 
 def login(request):
     """Renders the login page."""
@@ -72,5 +76,31 @@ def gather_digits(request):
         g.say('Press one to hear a song, two to receive an SMS')
         g.pause(length=1)
         g.say('Press one to hear a song, two to receive an SMS')
+=======
+@twilio_view
+def gather_digits(request):
+    twilio_response = Response()
+
+    twilio_tesponse.say("I need this to say whatever right here.")
+ 
+    with twilio_response.gather(action='/respond/', numDigits=1) as g:
+        g.say('Press one to be dissapointed, two to receive an SMS')
+        g.pause(length=1)
+        g.say('Press one to be dissapointed, two to receive an SMS')
+ 
+    return twilio_response
+
+@twilio_view
+def handle_response(request):
+    digits = request.POST.get('Digits', '')
+    twilio_response = Response()
+    if digits == '1':
+        twilio_response.say("Hah, you don't get a song")
+ 
+    if digits == '2':
+        number = request.POST.get('From', '')
+        twilio_response.say('A text message is on its way')
+        twilio_response.sms('Hello!', to="+14167006502")
+>>>>>>> 895459de7fc14b8cfc0a51a46a41dfcecb19a4b8
  
     return twilio_response
