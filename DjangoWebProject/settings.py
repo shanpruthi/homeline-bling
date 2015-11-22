@@ -131,10 +131,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-<<<<<<< HEAD
 #    'django_twilio',
-=======
->>>>>>> parent of 83f46a9... maybe this will work?
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
