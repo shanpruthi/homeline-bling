@@ -6,13 +6,19 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     text-transform: uppercase;
+    font-style: oblique;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
 
 }
-
+a{
+    color:#fff;
+}
+a:hover{
+    color:#fff;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -44,7 +50,4 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-.navbar-inverse{
-    background-color: #f8aec3;
-    border-color: #f8aec3;
-}
+
