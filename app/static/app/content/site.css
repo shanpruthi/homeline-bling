@@ -100,6 +100,10 @@ input[type="checkbox"].input-validation-error {
     background-color: #ddc91f;
     padding:50px 0;
 }
+#shelters{
+    text-align:center;
+    background-color: #5f73a6;
+}
 .layout{
     padding-left: 5%;
     padding-right: 5%;
