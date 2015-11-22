@@ -1,16 +1,16 @@
 ﻿
 body {
-    font-family: 'Helvetica', 'Arial', san-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     color:#FFF;
     background-color: #f8aec3;
     padding-top: 50px;
     padding-bottom: 20px;
+    text-transform: uppercase;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
