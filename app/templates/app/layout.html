@@ -11,95 +11,97 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <script>
-            var map;
-            $(document).ready(function(){
-                map = new GMaps({
-                  el: '#map',
-                  lat: 41.8716,
-                  lng: -87.69012
-                });
-                map.addMarker({
-                  lat: 41.90975,
-                  lng: -87.71616,
-                  title: '1',
-                  infoWindow: {
-                    content: '<p>Latin United Community Housing Association</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.78142,
-                  lng: -87.66634,
-                  title: '2',
-                  infoWindow: {
-                    content: '<p>West Englewood United Organization</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.79791,
-                  lng: -87.62043,
-                  title: '3',
-                  infoWindow: {
-                    content: '<p>Door of Hope Rescue Mission</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.88281,
-                  lng: -87.63298,
-                  title: '4',
-                  infoWindow: {
-                    content: '<p>International Fellowship of Christians and Jews</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.89629,
-                  lng: -87.63199,
-                  title: '5',
-                  infoWindow: {
-                    content: '<p>Access Living of Metropolitan</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.88967,
-                  lng: -87.76475,
-                  title: '6',
-                  infoWindow: {
-                    content: '<p>Single Room Housing Assistance Corporation</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.93113,
-                  lng: -87.76475,
-                  title: '7',
-                  infoWindow: {
-                    content: '<p>Northwest Side Housing Centre</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.87949,
-                  lng: -87.66869,
-                  title: '8',
-                  infoWindow: {
-                    content: '<p>Cathedral Shelter of Chicago</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.87934,
-                  lng: -87.62746,
-                  title: '9',
-                  infoWindow: {
-                    content: '<p>Housing Action Illinois</p>'
-                  }
-                });
-                map.addMarker({
-                  lat: 41.85556,
-                  lng: -87.66276,
-                  title: '10',
-                  infoWindow: {
-                    content: '<p>Spanish Coalition for Housing</p>'
-                  }
-                });
+        var map;
+        $(document).ready(function(){
+            map = new GMaps({
+              el: '#map',
+              lat: 41.8716,
+              lng: -87.69012,
+              zoomControl : false,
+              panControl : true
             });
-          </script>
+            map.addMarker({
+              lat: 41.90975,
+              lng: -87.71616,
+              title: '1',
+              infoWindow: {
+                content: '<p>Latin United Community Housing Association</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.78142,
+              lng: -87.66634,
+              title: '2',
+              infoWindow: {
+                content: '<p>West Englewood United Organization</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.79791,
+              lng: -87.62043,
+              title: '3',
+              infoWindow: {
+                content: '<p>Door of Hope Rescue Mission</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.88281,
+              lng: -87.63298,
+              title: '4',
+              infoWindow: {
+                content: '<p>International Fellowship of Christians and Jews</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.89629,
+              lng: -87.63199,
+              title: '5',
+              infoWindow: {
+                content: '<p>Access Living of Metropolitan</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.88967,
+              lng: -87.76475,
+              title: '6',
+              infoWindow: {
+                content: '<p>Single Room Housing Assistance Corporation</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.93113,
+              lng: -87.76475,
+              title: '7',
+              infoWindow: {
+                content: '<p>Northwest Side Housing Centre</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.87949,
+              lng: -87.66869,
+              title: '8',
+              infoWindow: {
+                content: '<p>Cathedral Shelter of Chicago</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.87934,
+              lng: -87.62746,
+              title: '9',
+              infoWindow: {
+                content: '<p>Housing Action Illinois</p>'
+              }
+            });
+            map.addMarker({
+              lat: 41.85556,
+              lng: -87.66276,
+              title: '10',
+              infoWindow: {
+                content: '<p>Spanish Coalition for Housing</p>'
+              }
+            });
+        });
+    </script> 
 </head>
 
 <body>
