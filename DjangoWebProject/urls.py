@@ -39,7 +39,6 @@ urlpatterns = patterns('',
         },
         name='logout'),
     url(r'^gather/$', 'app.views.gather_digits'),
-    url(r'^respond/$', 'app.views.handle_response'),
 
     url(r'^gather/$', 'app.views.gather_digits'),
     # Uncomment the admin/doc line below to enable admin documentation:
