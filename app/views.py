@@ -54,6 +54,8 @@ def about(request):
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
+
+    all_entries = Entry.objects.all().filter(spots_remaining>0)
  
     with twilio_response.gather(action='/respond/', numDigits=1) as g:
         g.say('Press one to hear a song, two to receive an SMS')
