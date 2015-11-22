@@ -15,8 +15,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'app.views.home', name='home'),
+    url(r'^shelterinfo$', 'app.views.shelter_information', name='shelterinfo'),
     url(r'^contact$', 'app.views.contact', name='contact'),
     url(r'^about', 'app.views.about', name='about'),
+    url(r'^database', 'app.views.database', name='database'),
     url(r'^login/$',
         'django.contrib.auth.views.login',
         {
@@ -35,8 +37,8 @@ urlpatterns = patterns('',
             'next_page': '/',
         },
         name='logout'),
-    url(r'^gather/$', 'app.views.gather_digits'),
-    url(r'^respond/$', 'app.views.handle_response'),
+ #   url(r'^gather/$', 'app.views.gather_digits'),
+  #  url(r'^respond/$', 'app.views.handle_response'),
     # Uncomment the admin/doc line below to enable admin documentation:
     #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

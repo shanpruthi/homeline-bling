@@ -16,3 +16,7 @@ class BootstrapAuthenticationForm(AuthenticationForm):
                                widget=forms.PasswordInput({
                                    'class': 'form-control',
                                    'placeholder':'Password'}))
+
+
+class Shelter_Form(forms.Form):
+    remaining_value = forms.IntegerField=()

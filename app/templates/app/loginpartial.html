@@ -9,7 +9,6 @@
 </form>
 
 
-
 {% else %}
 
 <ul class="nav navbar-nav navbar-right">
@@ -17,36 +16,3 @@
 </ul>
 
 {% endif %}
-<!--
-<br><br><br><br><br><br><br>
-
-<h4>Update the available spots in the table.</h4>
-
-<table>
-    <tr>
-        <th>Field 1</th>
-        ...
-        <th>Field N</th>
-    </tr>
-    {% for item in query_results %}
-    <tr> 
-        <td>{{ item.field1 }}</td>
-        ...
-        <td>{{ item.fieldN }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
-{% for value in Shelter_Information %} {
-	<li>(% {{ Shelter_Information.name}} , {{Shelter_Information.shelter_address}} , {{Shelter_Information.shelter_city}}, {{Shelter_Information.spots_remaining}} %}
-{% endfor %}
-}
-</br>
-</div>
-<form method="post">
-	{% csrf_token %}
-	{{ form }}
-	<button type="submit">Save Changes</button>
-</form>
-
--->

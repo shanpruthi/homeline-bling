@@ -1,0 +1,21 @@
+{% if user.is_authenticated %}
+<div class="layout loggedin">
+</br>
+<h2>{{ title }}.</h2>
+<h4>Update the available spots in the table</h4>
+        {% for info in resultant %} 
+            <li>{{ info.shelter_address }}</li>
+            <li>{{ info.shelter_name }}</li>
+            <li>{{ info.shelter_city }}</li>
+            <li>{{ info.spots_remaining }}</li>
+        {% endfor %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" value="Submit">Update Spots Available</button>
+    </form>
+</div>
+{% else %}
+<h4>Log in to see this page. </h4>        
+{% endif %}
