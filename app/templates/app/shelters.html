@@ -1,52 +1,16 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
-<div class="jumbotron">
-    <div class="container-fluid"> <div class="row">
-        <div class="col-md-6">
-            <img src = "http://i.imgur.com/A887l98.gif">
-        </div>
-        <div class="col-md-6"><div class="text">
-            <h1>Homeline Bling</h1>
-            <hr>
-            <h4>Call me on your payphone, late night when you need a home</h4>
-            <h2 style="padding-top:10%;">1-708-292-4124</h3>
-            <h5 style="font-style:italics;">call for the closest shelter near you</h5>
-            <hr style="width:100%">
-            <a href=#about><p>learn more &#8964</p></a>
-        </div></div>
-    </div></div>
-</div>
-<div id="about"><div class="container">
-    <div class="row">
-        <h2>how it works</h2>
-        <div class="col-md-4">
-            <img src="http://orig10.deviantart.net/f905/f/2015/326/2/f/i1_by_eexie-d9hlaif.png">
-            <h5>
-                the homeless can call the hotline from any payphone
-            </h5>
-        </div>
-        <div class="col-md-4">
-            <img src="http://orig02.deviantart.net/ff60/f/2015/326/1/7/i2_by_eexie-d9hlaic.png">
-            <h5>we extract data from our database of shelters, and using twilio api...</h5>
-        </div>
-        <div class="col-md-4">
-            <img src="http://orig05.deviantart.net/4bd8/f/2015/326/f/0/i3_by_eexie-d9hlai7.png">
-            <h5>
-                ....we reply with the location of the closest shelter home near you
-            </h5>
-        </div>
-    </div>
-</div></div>
-<div id="shelters"><div class="container-fluid"><div class="row">
-    <div class = "col-md-4" style="padding:4% 5%">
-        <h2>shelters</h2>
-        <hr>
-        <h4>CONNECTED WITH >50 SHELTER HOMES IN THE CHICAGO AREA</h4>
-        <hr style="width:100%">
-        <a href="{% url 'shelters' %}"><p>see all homes > </p></a>
-    </div>
-    <div class = "col-md-8">
+<div class = "shelterspage">
+	<div class="layout">
+		</br>
+		<h2>{{ title }}.</h2>
+		<h4>We're connected with many major shelters in the Chicago general area</h4>
+		</br>
+		</br>
+		</br>
+	</div>
+	<div class="container-fluid"><div class="row">
         <div id="map"></div>
         <script>
         var map;
@@ -138,8 +102,7 @@
                 content: '<h5>Spanish Coalition for Housing</h5>'
               }
             });
-    </script> 
-    </div>
-</div></div></div>
-
+    	</script> 
+	</div></div>
+</div>
 {% endblock %}

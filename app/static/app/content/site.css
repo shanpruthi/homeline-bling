@@ -39,7 +39,7 @@ h3{
     font-size: 30px;
 }
 h4{
-    font-size: 18px;
+    font-size: 24px;
 }
 h5{
     font-size:14px;
@@ -83,6 +83,7 @@ input[type="checkbox"].input-validation-error {
     background-color: #97e5f6;
     text-align: center;
     margin:0;
+    margin-top:50px;
 }
 .jumbotron img{
     width:100%;
@@ -94,15 +95,24 @@ input[type="checkbox"].input-validation-error {
 #about img{
     height:100px;
     margin:50px 0;
+    padding-top:10%;
 }
 #about{
     text-align:center;
     background-color: #ddc91f;
     padding:50px 0;
+    padding-top:5%;
+}
+#shelters{
+    text-align:center;
+    background-color: #5f73a6;
 }
 .layout{
     padding-left: 5%;
     padding-right: 5%;
+}
+.navbar-brand{
+    padding-left:0px;
 }
 footer {
     padding-left: 5%;
@@ -112,12 +122,27 @@ footer {
     text-transform: default;
 }
 .aboutpage {
-    background-color: #3B3131;
+    background-color: #ddc91f;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.shelterspage{
+    background-color: #5f73a6;
     padding-top: 40px;
     padding-bottom: 40px;
 }
 .contactpage {
-    background-color: #3B3131;
+    background-color: #97e5f6;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+#map{
+    width:100%;
+    height: 400px;
+}
+#map h5{
+    color:#5f73a6;
+}
+.nav{
+    padding-top:2%;
 }

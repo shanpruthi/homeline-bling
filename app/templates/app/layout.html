@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Homeline Bing</title>
     {% load staticfiles %}
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{% static 'app/scripts/gmaps.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    
 </head>
 
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="layout">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"><h4>Homeline Bling</h4></a>
+                <a href="/" class="navbar-brand"><h4>Homeline Bling <br> 1-708-292-4124</h4></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}"><h5>Home</h5></a></li>
+                    <li><a href="{% url 'shelters' %}"><h5>Shelters</h5></a></li>
                     <li><a href="{% url 'about' %}"><h5>About</h5></a></li>
                     <li><a href="{% url 'contact' %}"><h5>Contact<h5></a></li>
                     <li><a href="{% url 'database' %}"><h5>Database<h5></a></li>
@@ -35,9 +39,9 @@
 
     <div class="body-content">
 {% block content %}{% endblock %}
-        <hr/>
         <footer>
-            <p>&copy; {{ year }} - Homeline Bling - Created at WildHacks 2015</p>
+            <hr/>
+            <h5>&copy; {{ year }} - Homeline Bling - Created at WildHacks 2015</p>
         </footer>
     </div>
 
