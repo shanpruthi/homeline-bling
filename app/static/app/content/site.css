@@ -124,17 +124,23 @@ footer {
 .aboutpage {
     background-color: #ddc91f;
     padding-top: 40px;
+    margin-top:50px;
     padding-bottom: 40px;
 }
 .shelterspage{
     background-color: #5f73a6;
     padding-top: 40px;
+    margin-top:50px;
     padding-bottom: 40px;
 }
 .contactpage {
     background-color: #97e5f6;
     padding-top: 20px;
+    margin-top:50px;
     padding-bottom: 20px;
+}
+.body-content{
+    margin-top:50px;
 }
 #map{
     width:100%;
