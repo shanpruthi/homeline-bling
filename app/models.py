@@ -16,6 +16,10 @@ class Shelter_Information(models.Model):
 	latitude = models.FloatField(max_length=200, default=0);
 	spots_remaining = models.IntegerField("Space Available", default=0);
 
+	class Meta:
+		db_table = "Shelter_Information"
+
+
 class Login_Check(models.Model):
 	user_name = models.CharField("User Name", max_length=20);
 	password = models.CharField("Password", max_length=15, default="password");

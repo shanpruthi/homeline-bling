@@ -7,10 +7,14 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from app.models import *;
+from django.shortcuts import render_to_response
 #from twilio.twiml import Response
 
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
+
+
+
 
 def home(request):
     """Renders the home page."""
@@ -53,7 +57,6 @@ def about(request):
         })
     )
 
-<<<<<<< HEAD
 
 def login(request):
     """Renders the login page."""
@@ -69,14 +72,6 @@ def login(request):
         })
     )
 
-def gather_digits(request):
-    twilio_response = Response()
- 
-    with twilio_response.gather(action='/respond/', numDigits=1) as g:
-        g.say('Press one to hear a song, two to receive an SMS')
-        g.pause(length=1)
-        g.say('Press one to hear a song, two to receive an SMS')
-=======
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
@@ -101,6 +96,5 @@ def handle_response(request):
         number = request.POST.get('From', '')
         twilio_response.say('A text message is on its way')
         twilio_response.sms('Hello!', to="+14167006502")
->>>>>>> 895459de7fc14b8cfc0a51a46a41dfcecb19a4b8
  
     return twilio_response
