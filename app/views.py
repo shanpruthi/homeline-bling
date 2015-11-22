@@ -69,6 +69,19 @@ def about(request):
             'year':datetime.now().year,
         })
     )
+def shelters(request):
+    """Renders the shelters page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/shelters.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Shelters',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        })
+    )
 
 
 def login(request):
@@ -88,13 +101,9 @@ def login(request):
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
-
     city = request.POST.get('FromCity', '')
-
     shelters = Shelter_Information.objects.filter(spots_remaining__gt=0)
-
     shelter = get_closest_shelter(city)
-
     twilio_response.say("You are from %s" % shelter)
- 
+
     return twilio_response
