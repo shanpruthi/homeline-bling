@@ -25,19 +25,22 @@ h1,h2,h3,h4{
     font-style: italic;
 }
 h1{
-    font-size:42pt;   
+    font-size:36pt;   
 }
 h2{
-    font-size: 36pt;
+    font-size: 30pt;
 }
 h3{
-    font-size: 30pt;
+    font-size: 24pt;
 }
 h4{
     font-size: 14pt;
 }
 p{
     font-size: 11pt;
+}
+hr{
+    border:solid 1px #fff;
 }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
