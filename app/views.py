@@ -55,6 +55,6 @@ def about(request):
 def gather_digits(request):
     twilio_response = Response()
  
-    g.say('Hello, this line of speech took me 10 hours to get working!')
+    twilio_response.say('Hello! This took me 10 hours to get working.')
  
     return twilio_response
