@@ -20,21 +20,24 @@ a:hover{
     color:#fff;
     text-decoration: none;
 }
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5{
     font-weight: bold;
     font-style: italic;
 }
 h1{
-    font-size:36pt;   
+    font-size: 42px;   
 }
 h2{
-    font-size: 30pt;
+    font-size: 36px;
 }
 h3{
-    font-size: 24pt;
+    font-size: 30px;
 }
 h4{
-    font-size: 14pt;
+    font-size: 24px;
+}
+h5{
+    font-size:14px;
 }
 p{
     font-size: 11pt;
