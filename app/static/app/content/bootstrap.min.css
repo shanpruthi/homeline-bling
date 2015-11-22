@@ -3818,7 +3818,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 0px 15px;
 }
 
 .nav > li > a:hover,
@@ -4244,7 +4244,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-nav > li > a {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   line-height: 20px;
 }
 
@@ -4281,7 +4281,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li > a {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
   }
 }
 
