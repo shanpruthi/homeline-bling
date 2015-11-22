@@ -3828,12 +3828,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav > li.disabled > a {
-  color: #999999;
+  color: #fff;
 }
 
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #999999;
+  color: #fff;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
