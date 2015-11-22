@@ -64,7 +64,6 @@ def gather_digits(request):
 
 @twilio_view
 def handle_response(request):
- 
     digits = request.POST.get('Digits', '')
     twilio_response = Response()
     if digits == '1':
@@ -72,8 +71,7 @@ def handle_response(request):
  
     if digits == '2':
         number = request.POST.get('From', '')
-        zip_code = request.POST.get('FromZip', '')
         twilio_response.say('A text message is on its way')
-        twilio_response.sms('Your zip code: %s' % zip_code, to=number)
+        twilio_response.sms('Hello!', to=number)
  
     return twilio_response
