@@ -18,11 +18,8 @@ urlpatterns = patterns('',
     url(r'^shelterinfo$', 'app.views.shelter_information', name='shelterinfo'),
     url(r'^contact$', 'app.views.contact', name='contact'),
     url(r'^about', 'app.views.about', name='about'),
-<<<<<<< HEAD
     url(r'^database', 'app.views.database', name='database'),
-=======
     url(r'^shelters', 'app.views.shelters', name='shelters'),
->>>>>>> 6bac01ac29fbfd6df35a45e703b64ba55fc0a0c9
     url(r'^login/$',
         'django.contrib.auth.views.login',
         {
@@ -41,14 +38,12 @@ urlpatterns = patterns('',
             'next_page': '/',
         },
         name='logout'),
-<<<<<<< HEAD
- #   url(r'^gather/$', 'app.views.gather_digits'),
-  #  url(r'^respond/$', 'app.views.handle_response'),
-=======
     url(r'^gather/$', 'app.views.gather_digits'),
->>>>>>> 6bac01ac29fbfd6df35a45e703b64ba55fc0a0c9
+    url(r'^respond/$', 'app.views.handle_response'),
+
+    url(r'^gather/$', 'app.views.gather_digits'),
     # Uncomment the admin/doc line below to enable admin documentation:
-    #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),

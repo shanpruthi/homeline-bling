@@ -8,17 +8,15 @@ from django.template import RequestContext
 from datetime import datetime
 from app.models import *;
 from django.shortcuts import render_to_response
-<<<<<<< HEAD
-#from twilio.twiml import Response
+from twilio.twiml import Response
 from .forms import Shelter_Form
 
-#from django_twilio.decorators import twilio_view
-#from twilio.twiml import Response
+from django_twilio.decorators import twilio_view
+from twilio.twiml import Response
 
 def shelter_information(request):
     shelter_information = Shelter_Information.objects.all();
     return render_to_response('app/database.html', {'shelter_information': shelter_information})
-=======
 
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
@@ -39,7 +37,6 @@ def get_closest_shelter(location):
     return {'latitude': latitude, 'longitude': longitude}
 
 ######## View Functions ##############
->>>>>>> 6bac01ac29fbfd6df35a45e703b64ba55fc0a0c9
 
 def home(request):
     """Renders the home page."""
@@ -131,7 +128,6 @@ def login(request):
             'year':datetime.now().year,
         })
     )
-'''
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
@@ -141,22 +137,3 @@ def gather_digits(request):
     twilio_response.say("You are from %s" % shelter)
 
     return twilio_response
-<<<<<<< HEAD
-
-@twilio_view
-def handle_response(request):
-    digits = request.POST.get('Digits', '')
-    twilio_response = Response()
-    if digits == '1':
-        twilio_response.say("Hah, you don't get a song")
- 
-    if digits == '2':
-        number = request.POST.get('From', '')
-        twilio_response.say('A text message is on its way')
-        twilio_response.sms('Hello!', to="+14167006502")
- 
-    return twilio_response
-
-'''
-=======
->>>>>>> 6bac01ac29fbfd6df35a45e703b64ba55fc0a0c9
