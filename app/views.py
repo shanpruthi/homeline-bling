@@ -54,6 +54,8 @@ def about(request):
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
+
+    twilio_tesponse.say("I need this to say whatever right here.")
  
     with twilio_response.gather(action='/respond/', numDigits=1) as g:
         g.say('Press one to be dissapointed, two to receive an SMS')
