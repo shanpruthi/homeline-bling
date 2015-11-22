@@ -8,13 +8,26 @@ from django.template import RequestContext
 from datetime import datetime
 from app.models import *;
 from django.shortcuts import render_to_response
-#from twilio.twiml import Response
 
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
 
+import json, requests
 
+######## Helper Functions ############
 
+def geocoding(location):
+    return "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=AIzaSyA7XxD_9Z_7uJpi5Jx0sXFe_dT3NL2qpCk"
+
+def get_closest_shelter(location):
+    reqSent = requests.post(geocoding(location))
+    jsonSent = json.loads(reqSent.content)
+    latitude = jsonSent['results'][0]['geometry']['location']['lat']
+    longitude = jsonSent['results'][0]['geometry']['location']['lng']
+
+    return {'latitude': latitude, 'longitude': longitude}
+
+######## View Functions ##############
 
 def home(request):
     """Renders the home page."""
@@ -77,22 +90,11 @@ def gather_digits(request):
     twilio_response = Response()
 
     city = request.POST.get('FromCity', '')
+
     shelters = Shelter_Information.objects.filter(spots_remaining__gt=0)
 
-    twilio_response.say("You are from %s" % city)
- 
-    return twilio_response
+    shelter = get_closest_shelter(city)
 
-@twilio_view
-def handle_response(request):
-    digits = request.POST.get('Digits', '')
-    twilio_response = Response()
-    if digits == '1':
-        twilio_response.say("Hah, you don't get a song")
- 
-    if digits == '2':
-        number = request.POST.get('From', '')
-        twilio_response.say('A text message is on its way')
-        twilio_response.sms('Hello!', to="+14167006502")
+    twilio_response.say("You are from %s" % shelter)
  
     return twilio_response
