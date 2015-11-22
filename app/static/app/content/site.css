@@ -121,12 +121,17 @@ footer {
     text-transform: default;
 }
 .aboutpage {
-    background-color: #3B3131;
+    background-color: #ddc91f;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.shelterpage{
+    background-color: #5f73a6;
     padding-top: 40px;
     padding-bottom: 40px;
 }
 .contactpage {
-    background-color: #3B3131;
+    background-color: #97e5f6;
     padding-top: 20px;
     padding-bottom: 20px;
 }
