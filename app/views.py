@@ -7,8 +7,7 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 
-from django_twilio.decorators import twilio_view
-from twilio.twiml import Response
+import django_twilio
 
 def home(request):
     """Renders the home page."""
