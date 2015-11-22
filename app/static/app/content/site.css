@@ -20,6 +20,25 @@ a:hover{
     color:#fff;
     text-decoration: none;
 }
+h1,h2,h3,h4{
+    font-weight: bold;
+    font-style: italic;
+}
+h1{
+    font-size:42pt;   
+}
+h2{
+    font-size: 36pt;
+}
+h3{
+    font-size: 30pt;
+}
+h4{
+    font-size: 14pt;
+}
+p{
+    font-size:14pt;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
