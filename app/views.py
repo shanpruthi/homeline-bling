@@ -6,7 +6,9 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
-#from twilio.twiml import Response
+
+from django_twilio.decorators import twilio_view
+from twilio.twiml import Response
 
 def home(request):
     """Renders the home page."""
@@ -49,6 +51,7 @@ def about(request):
         })
     )
 
+@twilio_view
 def gather_digits(request):
     twilio_response = Response()
  
