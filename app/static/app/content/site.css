@@ -85,6 +85,7 @@ input[type="checkbox"].input-validation-error {
     padding:0;
     background-color: #97e5f6;
     text-align: center;
+    margin:0;
 }
 .jumbotron img{
     width:100%;
