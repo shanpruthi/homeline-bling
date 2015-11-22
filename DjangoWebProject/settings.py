@@ -138,6 +138,9 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
+TWILIO_ACCOUNT_SID = 'ACf14e3ba903d05bddc9ca4c69e8be6d8d'
+TWILIO_AUTH_TOKEN = 'c6bdf749be21593d2073d7bd505ce705'
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
