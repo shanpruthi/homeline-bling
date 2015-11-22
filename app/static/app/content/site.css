@@ -93,3 +93,9 @@ input[type="checkbox"].input-validation-error {
     padding:10% 20%;
     margin:auto;
 }
+#about img{
+    width:100px;
+}
+#about{
+    text-align:center;
+}
