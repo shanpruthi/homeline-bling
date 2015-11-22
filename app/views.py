@@ -56,6 +56,19 @@ def about(request):
             'year':datetime.now().year,
         })
     )
+def shelters(request):
+    """Renders the shelters page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/shelters.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Shelters',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        })
+    )
 
 
 def login(request):
