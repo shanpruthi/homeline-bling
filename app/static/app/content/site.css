@@ -37,7 +37,7 @@ h4{
     font-size: 14pt;
 }
 p{
-    font-size:11pt;
+    font-size: 11pt;
 }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -70,4 +70,6 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-
+.container{
+    width:100%;
+}
