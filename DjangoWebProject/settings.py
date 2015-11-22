@@ -1,7 +1,7 @@
 """
 Django settings for DjangoWebProject project.
 """
-
+import sys
 from os import path
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
 sys.path.append("/venv/lib/python2.7/site-packages")
