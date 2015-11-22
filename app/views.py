@@ -75,13 +75,11 @@ def login(request):
 @twilio_view
 def gather_digits(request):
     twilio_response = Response()
- 
+
+    city = request.POST.get('FromCity', '')
     shelters = Shelter_Information.objects.filter(spots_remaining__gt=0)
 
-    with twilio_response.gather(action='/respond/', numDigits=1) as g:
-        g.say('Press one to be dissapointed, two to receive an SMS')
-        g.pause(length=1)
-        g.say('Press one to be dissapointed, two to receive an SMS')
+    twilio_response.say("You are from %s" % city)
  
     return twilio_response
 
