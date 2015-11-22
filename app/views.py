@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
-#from twilio.twiml import Response
+from twilio.twiml import Response
 
 def home(request):
     """Renders the home page."""
